@@ -1,32 +1,25 @@
 ﻿<Properties StartupConfiguration="{CE6B5422-68B6-2DA7-2889-85AF243FD048}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Complete-Game/Scripts/AircraftControles.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AircraftControles.cs">
     <Files>
-      <File FileName="Assets/_Complete-Game/Scripts/AircraftControles.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/AircraftControles.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Aileron" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="_Complete-Game" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="AircraftControles.cs" selected="True" />
-                </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="AircraftControles.cs" selected="True" />
               </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Aileron" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b0fd4d73-ff4e-4c74-99c9-8fbecf9a2acc" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b551e03-a3ab-40b2-8509-f9a7e7ce4ebf" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
