@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AircraftControles : MonoBehaviour
 {
-    float thrust = 20.0f;
+    public float thrust = 20.0f;
     [SerializeField] float turnSpeed = 0.0f;
     [SerializeField] float rollSpeed = 1.0f;
     float roll = 0.0f;
@@ -18,6 +18,9 @@ public class AircraftControles : MonoBehaviour
 
     [SerializeField] float cameraRotateFactor = 0.25f;
 
+    public GameObject gunProjectile; // Bullet Prefab w/ Collider
+    public float fireRate; // Higher is slower
+    private float nextFire; // The next time the gun is allowed to fire
 
     private GameObject craft;
 
@@ -34,6 +37,7 @@ public class AircraftControles : MonoBehaviour
         float inputHorizontal = Input.GetAxis("Horizontal");
         float inputVertical = Input.GetAxis("Vertical");
         float thrustRatio = thrust/thrustMax; // % of max thrust
+
         
         // calculate the roll of player ship
         roll = Mathf.MoveTowards(roll, rollCap*inputHorizontal*thrustRatio, Time.deltaTime * rollSpeed * thrustScale * thrustRatio);
@@ -62,6 +66,15 @@ public class AircraftControles : MonoBehaviour
 
         // move in the direction the air craft is facing 
         transform.position += transform.forward * Time.deltaTime * thrust;
+
+
+        // Firing Shots
+        // [Spacebar] = Fire1
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(gunProjectile, transform.Find("vehicle_playerShip_collider").transform.position, transform.rotation);
+        }
     }
 
     void FixedUpdate()
